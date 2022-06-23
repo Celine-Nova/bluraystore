@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
+
+    <bean class="com.mycompany.bluraystore.controller.MovieController">
+    </bean>
+
+    <bean id="service" class="com.mycompany.bluraystore.service.DefaultMovieService">
+    </bean>
+
+    <bean id="repository" class="com.mycompany.bluraystore.repository.file.FileMovieRepository">
+        <property name="file" value="/Users/samihhabbani/Documents/spring_boot/generated_files/movies.csv"/>
+    </bean>
+
+</beans>
